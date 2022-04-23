@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="title">
+        <h1>Anh Long à, Anh có yêu em không?</h1>
+        <h3>Nếu anh thoát ra và không trả lời thì là đồng ý rồi đấy nhá ^^</h3>
+    </div>
+    <div id="agree-table">
+        <h1>Cảm ơn anh vì đã đồng ý</h1>
+        <br>
+        <div class="pop1">
+            <div>
+                <img src="./images/love-gif-2.gif" alt="">
+            </div>
+            <div>
+                <h3>Em cũng thích anh nhiều lắm &#10084</h3>
+                <h3>Giữa vô vàn dòng người ngoài kia, em chỉ là hạt cát bình thường, không có gì nổi trội, ấy vậy mà anh vẫn thích em.
+                    Em không biết tương lai chúng ta sẽ ra sao, như thế nào, nhưng em muốn cả 2 chúng ta sẽ nắm tay nhau vượt qua mọi
+                    khó khăn dù có thế nào cũng không buông tay nhau anh nhé
+                </h3>
+            </div>
+        </div>
+        <div class="close">
+            <a href="#" onclick="closeTable()">Đóng</a>
+        </div>
+    </div>
+    <div id="disagree-table">
+        <h1>Ơ anh không thích em thật sao</h1>
+        <br>
+        <div class="pop2">
+            <div>
+                <img src="./images/200.gif" alt="">
+            </div>
+            <div>
+                <h3>Nhưng em thì thích anh nhiều lắm</h3>
+                <h3>Hay em làm điều gì sai nhỉ, việc anh nhấn bên này chứng tỏ em làm điều gì khiến anh buồn sao. Tuy hơi buồn nhưng
+                    em sẽ không từ bỏ đâu, em sẽ khiến anh dần dần thích em. Có cố gắng sẽ có thành công, em tin đôi ta sẽ thành 1 cặp thật hạnh phúc &#10084
+                </h3>
+            </div>
+        </div>
+        <div class="close">
+            <a href="#" onclick="closeTable()">Đóng</a>
+        </div>
+    </div>
+    <section>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <ul>
+            <li>
+                <a href="#" class="agree" onclick="agree()">
+                    <i class="fas fa-heart"></i>
+                    <p>Đồng ý</p>
+                </a>
+            </li>
+            <li class="dis">
+                <a href="#" class="disagree" onclick="disagree()">
+                    <i class="fas fa-heart-broken"></i>
+                    <p>Không! Còn lâu nhé</p>
+                    <span></span>
+                </a>
+            </li>
+        </ul>
+    </section>
+    <script src="./script/mycript.js"></script>
+</body>
+</html>

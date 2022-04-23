@@ -1,0 +1,202 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow: hidden;
+}
+section::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    bottom: 0;
+    z-index: 1;
+    backdrop-filter: blur(5px);
+    border-top: 1px solid rgba(255,255,255,0.5);
+}
+section {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #ff4f8b, #dff1ff);
+}
+section .color{
+    position: absolute;
+    filter: blur(150px);
+}
+section .color:nth-child(1){
+    background-color: #ff359b;
+    width: 600px;
+    height: 600px;
+    top: -350px;
+}
+section .color:nth-child(2){
+    background-color: #00d2ff;
+    width: 500px;
+    height: 500px;
+    bottom: -150px;
+    left: 100px;
+}
+section .color:nth-child(3){
+    background-color: #fffd87;
+    width: 300px;
+    height: 300px;
+    bottom: 50px;
+    right: 0px;
+}
+p{
+    margin-left: 10px;
+}
+ul{
+    position: relative;
+    display: flex;
+    z-index: 2;
+}
+ul li {
+    position: relative;
+    list-style: none;
+    margin: 10px;
+}
+ul li a{
+    position: relative;
+    width: 300px;
+    height: 100px;
+    display: inline-block;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5em;
+    border: 1px solid rgba(255,255,255,0.4);
+    border-right: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 5px 45px rgba(0,0,0,0.1);
+    backdrop-filter: blur(2px);
+    transition: 0.5s;
+    overflow: hidden;
+}
+ul li a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100%;
+    background: rgba(255,255,255,0.5);
+    transform: skew(45deg) translateX(350px);
+    transition: 0.5s;
+}
+ul li a:hover{
+    transform: translateY(-20px);
+}
+ul li a:hover::before{
+    transform: skew(45deg) translateX(-150px);
+}
+.title{
+    background-color: transparent;
+    position: absolute;
+    z-index: 10;
+    text-align: center;
+    width: 100%;
+    margin-top: 100px;
+}
+.title h1{
+    font-size: 3em;
+}
+.title h3{
+    font-size: 1.5em;
+}
+h1, h3{
+    color: #fff;
+}
+
+
+#agree-table{
+    display: none;
+    width: 800px;
+    height: 500px;
+    z-index: 20;
+    position: absolute;
+    top: 100px;
+    transform: translateX(50%);
+    border: 1px solid rgba(255,255,255,0.4);
+    border-right: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 5px 45px rgba(0,0,0,0.1);
+    backdrop-filter: blur(50px);
+    border-radius: 10px;
+    padding: 10px;
+}
+#agree-table h1{
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.4);
+    margin: 0 20%;
+}
+#agree-table h3{
+    text-align: center;
+    font-size: 1.6em;
+}
+
+.pop1{
+    display: flex;
+}
+.close{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+.close a{
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid rgba(255,255,255,0.4);
+    box-shadow: 0 5px 45px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+#disagree-table{
+    display: none;
+    width: 800px;
+    height: 500px;
+    z-index: 20;
+    position: absolute;
+    top: 100px;
+    transform: translateX(50%);
+    border: 1px solid rgba(255,255,255,0.4);
+    border-right: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 5px 45px rgba(0,0,0,0.1);
+    backdrop-filter: blur(50px);
+    border-radius: 10px;
+    padding: 10px;
+}
+#disagree-table h1{
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.4);
+    margin: 0 20%;
+}
+#disagree-table h3{
+    text-align: center;
+    font-size: 1.6em;
+}
+.pop2{
+    display: flex;
+}
+
+@keyframes drop {
+    from {
+        opacity: 0;
+        top: 0;
+    }
+    to {
+        opacity: 1;
+        top:100px;
+    }
+}
